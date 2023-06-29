@@ -1,0 +1,22 @@
+{
+  "name": "mongodb-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evermuniz/MongoDB-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evermuniz/MongoDB-API/issues"
+  },
+  "homepage": "https://github.com/Evermuniz/MongoDB-API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
