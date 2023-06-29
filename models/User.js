@@ -1,12 +1,12 @@
-const { Schema, Types } = require("mongoose");
+const { Schema, model } = require("mongoose");
 const thoughtSchema = require("./Thought");
 
 
 const UserSchema = new Schema({
-    user_id: {
-        type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId()
-    },
+    // user_id: {
+    //     type: Schema.Types.ObjectId,
+    //     default: () => new Types.ObjectId()
+    // },
     username: {
         type: String,
         unique: true,
@@ -15,7 +15,7 @@ const UserSchema = new Schema({
     },
     email: {
         type: String,
-        required,
+        required: true,
         unique: true,
         match: [/.+@.+\..+/],
     },
@@ -31,7 +31,6 @@ const UserSchema = new Schema({
             ref: "User",
         },
     ],
-    thoughtSchema: [thoughtSchema],
 },
     {
         toJSON: {
