@@ -107,37 +107,5 @@ module.exports = {
             console.log(err);
             res.status(500).json(err);
         }
-    },
-    async addReaction(req, res) {
-        try {
-            const reaction = await Thought.findOneAndUpdate(
-                { _id: req.params.id },
-                { $addToSet: { reactions: req.body } },
-                { runValidators: true, new: true }
-            );
-            if (!reaction) {
-                return res.status(404).json({ message: 'No reaction with this id!' });
-            }
-            res.json(reaction);
-        } catch (err) {
-            console.log(err);
-            res.status(500).json(err);
-        }
-    },
-    async deleteReaction(req, res) {
-        try {
-            const reaction = await Thought.findOneAndUpdate(
-                { _id: req.params.id },
-                { $pull: { reactions: req.body } },
-                { runValidators: true, new: true }
-            );
-            if (!reaction) {
-                return res.status(404).json({ message: 'No reaction with this id!' });
-            }
-            res.json({ message: 'Reaction deleted!' });
-        } catch (err) {
-            console.log(err);
-            res.status(500).json(err);
-        }
     }
 };
