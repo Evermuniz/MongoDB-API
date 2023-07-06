@@ -6,14 +6,10 @@ module.exports = {
         try {
             const users = await User.find();
 
-            const userObj = {
-                users,
-                totalUsers: await totalUsers(),
-            };
-            res.json(userObj);
+            res.json(users);
         } catch (err) {
             console.log(err);
-            res.statuts(500).json(err);
+            res.status(500).json(err);
         }
     },
     async getUserById(req, res) {
