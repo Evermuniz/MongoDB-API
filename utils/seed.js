@@ -56,7 +56,7 @@ connection.once("open", async () => {
   const thought = [];
 
   for (let i = 0; i < 10; i++) {
-    const num = Math.floor(Math.random() * 5);
+    const num = Math.floor(Math.random() * 3);
 
 for (let j = 0; j < num; j++) {
     const thoughtText = getRandomThought();
@@ -68,7 +68,7 @@ const reactions = [];
 for (let k = 0; k < num; k++) {
     
     const reactionData = getRandomReaction();
-    reactions.push(reactionData);
+    reactions.push([reactionData]);
 }
 
 
