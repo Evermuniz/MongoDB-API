@@ -34,9 +34,9 @@ This application is fairly simple in that it primarily uses express and mongoose
     - Thought from user's thought list
     - Reaction from a thought belonging to a user
 
-Click on this link to view a video walkthrough of the routes mentioned above. 
+Click on this [link](https://drive.google.com/file/d/153npURE5PKgOx_At23k67AS_lbiU6Qh3/view) to view a video walkthrough of the routes mentioned above. 
 
-[![Screenshot of the application](./Assets/screenshot.jpeg)](https://muniz-tech-blog-62e3233fa5a7.herokuapp.com/) 
+![Screenshot of the application recording](./Assets/screenshot.jpeg)]
 
 ## Credits
 - Express.js
