@@ -1,8 +1,11 @@
+// Reaction schema used in the Thought model
 const { Schema, Types } = require("mongoose");
+// getter to format the timestamp on query
 const { getFormattedDate } = require("../utils/date");
 
 const ReactionSchema = new Schema(
   {
+    //id using the ObjectId type provided by Mongoose
     reactionId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
@@ -16,6 +19,7 @@ const ReactionSchema = new Schema(
       type: String,
       required: true,
     },
+    // formatted timestamp
     createdAt: {
       type: String,
       default: getFormattedDate,

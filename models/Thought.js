@@ -1,3 +1,4 @@
+// Thought model with the ReactionSchema nested in it
 const { Schema, model } = require("mongoose");
 const ReactionSchema = require("./Reaction");
 const { getFormattedDate } = require("../utils/date");
@@ -25,6 +26,12 @@ const ThoughtSchema = new Schema(
   }
 );
 
+// virtual to get the total count of reactions
+ThoughtSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
+});
+
+// virtual to format the timestamp on query
 ThoughtSchema.virtual("createdAt").get(getFormattedDate);
 
 const Thought = model("Thought", ThoughtSchema);
