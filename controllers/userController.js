@@ -28,7 +28,6 @@ module.exports = {
         friends: await User.find({ _id: { $in: user.userID } }),
       });
 
-      res.json(user);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

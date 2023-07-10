@@ -3,7 +3,7 @@
 
 ## Description
 
-This application uses a NoSQL database, specifically MongoDB. 
+This application is only a back-end server and uses a NoSQL database, specifically MongoDB. I learned how to create models and schemas and how collections interact with each other. I also learned about virtuals, aggregates, and CRUD operations. 
 
 
 ## Table of Contents (Optional)
@@ -14,18 +14,34 @@ This application uses a NoSQL database, specifically MongoDB.
 
 
 ## Usage
-When first visiting the site, you will see existing posts and a few options along the navigation bar. Anybody is able to view individual posts along with their comments but you must be logged in to submit a comment. You must also be logged in to publish, edit, or delete a post of your own. Simply login or sign up to access all the functionality. Click on the image below to visit the deployed application. 
+This application is fairly simple in that it primarily uses express and mongoose dependencies. After seeding the data, using MongoDB Compass is very helpful to view your collections and documents. Since there is no front-end, testing the API routes requires the usage of an application such as Insomnia. The routes you can test are:
+- GET 
+    - All users
+    - Single user by Id
+    - All thoughts
+    - Single thought by Id
+- POST 
+    - New user
+    - New friend
+    - New thought
+    - New reaction
+- PUT 
+    - Existing user
+    - Existing thought
+- DEL 
+    - User
+    - Friend from user's friend list
+    - Thought from user's thought list
+    - Reaction from a thought belonging to a user
+
+Click on this link to view a video walkthrough of the routes mentioned above. 
 
 [![Screenshot of the application](./Assets/screenshot.jpeg)](https://muniz-tech-blog-62e3233fa5a7.herokuapp.com/) 
 
 ## Credits
-- bcrypt
 - Express.js
-- Handlebars.js
-- MySQL and MySQL2 
-- Sequelize
-- Express-session
-- Dotenv
+- Mongoose
+- ChatGPT for help with the getter method to format dates 
 - References provided by the University of Utah Coding Bootcamp, in particular code under config, utils, and server.js
 
 
