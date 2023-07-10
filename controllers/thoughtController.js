@@ -1,5 +1,7 @@
+// CRUD operations for thoughts
 const { Thought } = require("../models");
 
+// get all thoughts
 module.exports = {
   async getAllThoughts(req, res) {
     try {
@@ -10,6 +12,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  // get one thought by id 
   async getThoughtById(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtID }).select("-__v");
@@ -24,6 +28,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  //create a thought
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -33,6 +39,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  // update a thought by id
   async updateThought(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -49,6 +57,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  // delete a thought by id
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtID });
@@ -58,6 +68,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  // add a reaction to a thought
   async addReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -75,6 +87,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+  // remove a reaction from a thought by reactionId
   async removeReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(

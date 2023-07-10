@@ -1,3 +1,4 @@
+// Using express router to route to the api routes
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
