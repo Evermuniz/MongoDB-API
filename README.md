@@ -36,7 +36,7 @@ This application is fairly simple in that it primarily uses express and mongoose
 
 Click on this [link](https://drive.google.com/file/d/153npURE5PKgOx_At23k67AS_lbiU6Qh3/view) to view a video walkthrough of the routes mentioned above. 
 
-![Screenshot of the application recording](./Assets/screenshot.jpeg)
+![Screenshot of the application recording](./assets/screenshot.jpeg)
 
 ## Credits
 - Express.js
